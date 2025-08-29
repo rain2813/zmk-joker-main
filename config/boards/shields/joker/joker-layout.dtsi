@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    zazu_layout: zazu_layout {
+    joker_layout: joker_layout {
         compatible = "zmk,physical-layout";
         display-name = "Layout";
         transform = <&default_transform>;
