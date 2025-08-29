@@ -1,34 +1,28 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35    // 10
+
 #include <input/processors.dtsi>
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+
 #define SNIPER 6
 #define MOUSE 5
 
 / {
-  zip_scroll_scaler: zip_scroll_scaler {
-    compatible = "zmk,input-processor-scaler";
-    #input-processor-cells = <2>;
-    type = <INPUT_EV_REL>;
-    codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
-    track-remainders;
-  };
+    zip_scroll_scaler: zip_scroll_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+        track-remainders;
+    };
 };
 
-&mmv_input_listener {
-       input-processors = <&zip_xy_scaler 2 1>;
-};
+&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&msc_input_listener {
-       input-processors = <&zip_scroll_scaler 2 1>;
-};
+&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
     acceleration-exponent = <0>;      // 0
@@ -162,9 +156,9 @@
 
         Qwery {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   
-&trans  &trans  &trans  &trans  &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  
+&kp NUMBER_1  &trans  &trans  &trans  &trans
+&trans        &trans  &trans  &trans  &trans
+&trans        &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
@@ -176,9 +170,9 @@
 
         Navi {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   
-&trans  &trans  &trans  &trans  &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
@@ -190,9 +184,9 @@
 
         Symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   
-&trans  &trans  &trans  &trans  &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
@@ -204,9 +198,9 @@
 
         Modify {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   
-&trans  &trans  &trans  &trans  &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Modify";
@@ -214,9 +208,9 @@
 
         Flash {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   
-&trans  &trans  &trans  &trans  &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Flash";
@@ -224,10 +218,9 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   
-&trans  &trans  &trans  &trans  &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  
- 
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Mouse";
@@ -235,9 +228,9 @@
 
         Sniper {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   
-&trans  &trans  &trans  &trans  &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Sniper";
@@ -245,9 +238,9 @@
 
         Number {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   
-&trans  &trans  &trans  &trans  &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Number";
