@@ -1,0 +1,46 @@
+{
+    "id": "joker",
+    "name": "joker",
+    "layouts": {
+      "default_layout": {
+        "name": "default_layout",
+        "layout": [
+          { "row": 0, "col":  0, "x":  0.75, "y":               4.15, "r":  10, "rx": 0, "ry":     0},
+          { "row": 0, "col":  1, "x":  1.37, "y":                4.3, "r":   5, "rx": 0, "ry":     0},
+          { "row": 0, "col":  2, "x":     2, "y":                4.5, "r":   0, "rx": 0, "ry":     0},
+          { "row": 0, "col":  3, "x":     2, "y":                5.5, "r":   0, "rx": 0, "ry":     0},
+          { "row": 0, "col":  4, "x":  1.46, "y":                5.3, "r":   5, "rx": 0, "ry":     0},
+          { "row": 1, "col":  0, "x":     3, "y":                4.5, "r":   0, "rx": 0, "ry":     0},
+          { "row": 1, "col":  1, "x":  3.58, "y":                4.8, "r":  -5, "rx": 0, "ry":     0},
+          { "row": 1, "col":  2, "x":  4.16, "y":                5.15, "r":-10, "rx": 0, "ry":     0},
+          { "row": 1, "col":  3, "x":   3.5, "y":                5.8, "r":  -5, "rx": 0, "ry":     0},
+          { "row": 1, "col":  4, "x":     3, "y":                5.5, "r":   0, "rx": 0, "ry":     0},
+          { "row": 2, "col":  0, "x":  0.25, "y":                  0, "r":   0, "rx": 0, "ry":     0},
+          { "row": 2, "col":  1, "x":  3.75, "y":                  0, "r":   0, "rx": 0, "ry":     0},
+          { "row": 2, "col":  2, "x":   2.5, "y":               1.25, "r":   0, "rx": 0, "ry":     0},
+          { "row": 2, "col":  3, "x":   1.5, "y":               2.25, "r":   0, "rx": 0, "ry":     0},
+          { "row": 2, "col":  4, "x":   2.5, "y":               3.25, "r":   0, "rx": 0, "ry":     0},
+          { "row": 2, "col":  5, "x":   3.5, "y":               2.25, "r":   0, "rx": 0, "ry":     0},
+          { "row": 2, "col":  6, "x":   2.5, "y":               2.25, "r":   0, "rx": 0, "ry":     0}
+        ]
+      }
+    },
+    "sensors": [
+      {
+        "ref": "left_encoder",
+        "name": "encoder_left",
+        "identifier": "encoder_left",
+        "compatible": "alps,ec11",
+        "label": "LEFT_ENCODER",
+        "enabled": true
+      },
+     {
+        "ref": "right_encoder",
+        "name": "encoder_right",
+        "identifier": "encoder_right",
+        "compatible": "alps,ec11",
+        "label": "RIGHT_ENCODER",
+        "enabled": true
+      }
+    ]
+  }
