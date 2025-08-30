@@ -11,6 +11,24 @@
 #define SNIPER 6
 #define MOUSE 5
 
+
+
+&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+
+&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
+
+&msc {
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <100>;       // 300
+    delay-ms = <0>;                   // 0
+};
+
+&mmv {
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <1>;
+    trigger-period-ms = <16>;
+};
+
 / {
     zip_scroll_scaler: zip_scroll_scaler {
         compatible = "zmk,input-processor-scaler";
@@ -157,7 +175,7 @@
 
         Qwery {
             bindings = <
-&kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_8     &kp NUMBER_7
+&ltq 1 NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_8     &kp NUMBER_7
 &kp NUMBER_4     &kp NUMBER_5     &kp NUMBER_6  &ltq 1 NUMBER_0  &kp NUMBER_9
 &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &kp UP        &kp LEFT         &kp DOWN      &kp RIGHT  &rgb_ug RGB_TOG
             >;
@@ -173,7 +191,7 @@
             bindings = <
 &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
 &rgb_ug RGB_SAI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans           &trans
-&trans           &trans           &trans           &trans           &trans           &trans  &trans
+&trans           &trans           &mmv MOVE_UP           &mmv MOVE_LEFT         &mmv MOVE_DOWN            &mmv MOVE_RIGHT  &trans
             >;
 
             sensor-bindings =
@@ -187,7 +205,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &trans           &mmv MOVE_UP           &mmv MOVE_LEFT         &mmv MOVE_DOWN            &mmv MOVE_RIGHT  &trans
             >;
 
             sensor-bindings =
