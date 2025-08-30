@@ -157,9 +157,9 @@
 
         Qwery {
             bindings = <
-&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_8     &kp NUMBER_7
-&kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &ltq 1 NUMBER_0  &kp NUMBER_9
-&rgb_ug RGB_EFF  &trans        &kp UP        &kp LEFT         &kp DOWN      &kp RIGHT  &rgb_ug RGB_TOG
+&kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_8     &kp NUMBER_7
+&kp NUMBER_4     &kp NUMBER_5     &kp NUMBER_6  &ltq 1 NUMBER_0  &kp NUMBER_9
+&rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &kp UP        &kp LEFT         &kp DOWN      &kp RIGHT  &rgb_ug RGB_TOG
             >;
 
             sensor-bindings =
